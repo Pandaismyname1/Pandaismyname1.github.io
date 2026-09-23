@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Emanuel Păiuș</title>
-<meta name="description" content="Emanuel Păiuș, software engineer in Iași, Romania. Co-founder of Technical Inside, .NET and C++ engineer at mindit.io, and the author of Minecraft mods with more than ten million downloads.">
+<meta name="description" content="Emanuel Păiuș, software engineer in Iași, Romania. Co-founder of Technical Inside, where we build Censory and DailySmith, .NET and C++ engineer at mindit.io, and the author of Minecraft mods with more than ten million downloads.">
 <link rel="canonical" href="https://pandaismyname1.github.io/">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f7f6">
@@ -76,7 +76,8 @@
   <div class="wrap nav-row">
     <a class="brand" href="#top">Emanuel Păiuș</a>
     <nav class="nav-links" aria-label="Sections">
-      <a href="#work">Work</a>
+      <a href="#products">Products</a>
+      <a href="#open-source">Open source</a>
       <a href="#mods">Mods</a>
       <a href="#about">About</a>
       <a href="#tools">Tools</a>
@@ -98,10 +99,10 @@
 
 <section class="hero wrap" id="top">
   <div class="hero-copy">
-    <h1>Software engineer by day, mod author by night.</h1>
-    <p class="lede">Emanuel Păiuș, Iași, Romania. Co-founder at Technical Inside, engineer at mindit.io, and ten million mod downloads on the side.</p>
+    <h1>I build software products, and mods on the side.</h1>
+    <p class="lede">Emanuel Păiuș, Iași, Romania. Co-founder of Technical Inside, .NET and C++ engineer at mindit.io, mod author with ten million downloads.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="#work">See the work</a>
+      <a class="btn btn-primary" href="#products">See the products</a>
       <a class="btn btn-ghost" href="https://github.com/Pandaismyname1">
         <svg class="ic" aria-hidden="true"><use href="#i-github-logo"/></svg>
         GitHub
@@ -109,69 +110,125 @@
     </div>
   </div>
   <figure class="hero-figure">
-    <img src="assets/img/urp-clouds.webp" width="1400" height="788" alt="Volumetric clouds rendered over a flat landscape in Unity" fetchpriority="high">
-    <figcaption>Sebastian Lague's volumetric clouds, ported to Unity's Universal Render Pipeline.</figcaption>
+    <img src="assets/img/censory.webp" width="1200" height="630" alt="Censory: redact personal data from PDFs and images" fetchpriority="high">
+    <figcaption>Censory, the document redaction product we ship at Technical Inside.</figcaption>
   </figure>
 </section>
 
 <section class="numbers-band">
   <div class="wrap numbers">
+    <div class="num"><span class="n">8 yrs</span><span class="l">writing software for a living, since 2018</span></div>
     <div class="num"><span class="n">10.5M</span><span class="l">mod downloads on CurseForge and Modrinth</span></div>
-    <div class="num"><span class="n">20</span><span class="l">published projects on CurseForge</span></div>
     <div class="num"><span class="n">3,401</span><span class="l">GitHub contributions in the last year</span></div>
-    <div class="num"><span class="n">12 yrs</span><span class="l">on GitHub, since 2014</span></div>
   </div>
 </section>
 
-<section class="section wrap" id="work" data-reveal>
+<section class="section wrap" id="products" data-reveal>
   <div class="section-head">
-    <h2>Selected work</h2>
-    <p class="sub">The projects I would show someone first. Mods with real download numbers, a modpack I ran as product owner, and two tools for working with AI agents.</p>
+    <h2>Products</h2>
+    <p class="sub">What I build at Technical Inside and on my own. The source for most of these is private, so this is the shape of the work rather than the code.</p>
+  </div>
+
+  <div class="cases">
+    <article class="case">
+      <div class="case-head">
+        <h3>Censory</h3>
+        <div class="case-meta">
+          <span>Technical Inside, 2026, co-founder</span>
+          <span>React, FastAPI, Postgres, Cloudflare R2</span>
+          <span>Vision models via Gemini and OpenRouter</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <p>Law firms, courts and institutions have to strip names, ID numbers, addresses, faces and signatures out of documents before sharing them, and most tools only draw a black box on top. Censory finds the personal data with a vision model, then removes it from the PDF content stream itself, with a person approving every redaction.</p>
+        <p>Files are encrypted at rest and never written to disk while detection runs. My recent work: the redaction editor rebuilt as a workbench, a touch shell for phones, a benchmark of vision models paired with deterministic face detection, and the pricing and marketing pages in English and Romanian.</p>
+        <div class="links">
+          <a href="https://censory.app">censory.app<svg class="ic ic-s" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+        </div>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-head">
+        <h3>DailySmith</h3>
+        <div class="case-meta">
+          <span>Technical Inside, 2026, co-founder</span>
+          <span>Go, SvelteKit, Postgres, Fly.io, Cloudflare</span>
+          <span>Renders through MD2</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <p>AI-written blogs that live on the customer's own domain instead of a subdomain nobody links to. A Go API and worker generate, review and schedule the posts, a SvelteKit dashboard runs the show, and delivery happens through a JavaScript SDK, an edge proxy, or a WordPress or Shopify plugin.</p>
+        <p>The articles render through MD2, my directive layer over Markdown, and a large share of the work went into making generated text stop reading like generated text. The WordPress and Shopify integrations are open source.</p>
+        <div class="links">
+          <a href="https://dailysmith.com">dailysmith.com<svg class="ic ic-s" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+          <a href="https://github.com/TechnicalInsideTI/dailysmith-wordpress-plugin">WordPress plugin<svg class="ic ic-s" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+          <a href="https://github.com/TechnicalInsideTI/dailysmith-shopify-app">Shopify app<svg class="ic ic-s" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+        </div>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-head">
+        <h3>Fit</h3>
+        <div class="case-meta">
+          <span>Personal, 2026, solo</span>
+          <span>SvelteKit, Drizzle, Postgres, USDA FoodData</span>
+          <span>OpenAI, Anthropic or Groq, chosen in config</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <p>A meal planner for a household that actually cooks. Instead of generating a week of unrelated recipes, it composes meals from a library of building blocks with known macros, respects each person's calorie target, rotates breakfasts, and reuses batch-cooked components across the week.</p>
+        <p>Nutrition data comes from the USDA FoodData Central exports. Most of the planner logic was written and verified through unattended Claude Code runs, with every decision logged for me to check the next morning.</p>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-head">
+        <h3>Jarvis</h3>
+        <div class="case-meta">
+          <span>Personal, 2026, in progress</span>
+          <span>TypeScript on Node 24, SQLite, Telegram</span>
+          <span>OpenRouter models, Claude Code as the coding worker</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <p>I work across five machines and three identities, and none of them knows what the others are doing. Jarvis is one always-on hub with a single memory and a Telegram thread as the conversation, plus node agents on each machine that do the work where the work lives, including starting Claude Code in its own worktree and handing back a pull request.</p>
+        <p>The design was stress-tested before any code existed: a decision log past ninety entries, a vault-based memory model I can open in Obsidian, and hard boundaries around employer data. The hub, nodes, plugin system and dashboard exist today; the user docs are written in MD2.</p>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-head">
+        <h3>cyrillOCR</h3>
+        <div class="case-meta">
+          <span>University team project, 2018 to 2019</span>
+          <span>Python, OpenCV, Keras, React</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <p>Reading printed Cyrillic text from scanned pages. A preprocessing module cleans and segments the scans with OpenCV, a feature extraction step turns glyphs into vectors, a Keras network classifies the characters, and a React front end drives the whole thing.</p>
+        <p>I worked on preprocessing. It is old code and reads like it, but it was the first time I shipped machine learning as part of a team, and the repositories are public.</p>
+        <div class="links">
+          <a href="https://github.com/cyrillOCR">Source<svg class="ic ic-s" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section wrap" id="open-source" data-reveal>
+  <div class="section-head">
+    <h2>Open source</h2>
+    <p class="sub">The public repositories I would show first. Two tools for working with AI agents, then the mods and the modpack with real download numbers behind them.</p>
   </div>
 
   <div class="bento">
     <article class="cell cell-a cell-img">
-      <img src="assets/img/letsdo-emi-compat.webp" width="700" height="957" alt="EMI recipe viewer showing a Let's Do Bakery recipe" loading="lazy">
-      <div class="cell-body">
-        <h3><a href="https://modrinth.com/mod/lets-do-emi-compat">[Let's Do Addon] EMI Compat</a></h3>
-        <p>Brings every recipe from the Let's Do mod collection into EMI, the item and recipe viewer. Fabric, Forge and NeoForge. Close to ten million downloads across CurseForge and Modrinth.</p>
-        <div class="links">
-          <a href="https://modrinth.com/mod/lets-do-emi-compat">Modrinth<svg class="ic ic-s" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
-          <a href="https://www.curseforge.com/minecraft/mc-mods/lets-do-emi-compat">CurseForge<svg class="ic ic-s" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
-          <a href="https://github.com/Pandaismyname1/Let-s-Do-EMI-Compat">Source<svg class="ic ic-s" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
-        </div>
-      </div>
-    </article>
-
-    <article class="cell cell-b cell-img">
-      <img src="assets/img/zoompack-dimensions.webp" width="1600" height="900" alt="A Zoompack 4 landscape with towering trees and a distant fortress" loading="lazy">
-      <div class="cell-body">
-        <h3><a href="https://www.curseforge.com/minecraft/modpacks/zoompack-4">Zoompack 4</a></h3>
-        <p>Hardcore RPG modpack for Minecraft 1.20.1 with five classes, nineteen races, nine dimensions and a live player economy. Product owner from 2024 to 2025.</p>
-        <div class="links">
-          <a href="https://www.curseforge.com/minecraft/modpacks/zoompack-4">CurseForge<svg class="ic ic-s" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
-          <a href="https://www.zoompack.dev">zoompack.dev<svg class="ic ic-s" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
-          <a href="https://github.com/zoom-packers">zoom-packers<svg class="ic ic-s" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
-        </div>
-      </div>
-    </article>
-
-    <article class="cell cell-c cell-img">
-      <img src="assets/img/semi-emi.webp" width="1600" height="900" alt="The EMI recipe viewer interface inside a Minecraft inventory" loading="lazy">
-      <div class="cell-body">
-        <h3><a href="https://github.com/Pandaismyname1/SEMI">SEMI, Seasonal EMI</a></h3>
-        <p>An unofficial continuation of EMI that follows the newest Minecraft versions. Drop-in replacement, existing EMI plugins keep working.</p>
-        <div class="links">
-          <a href="https://github.com/Pandaismyname1/SEMI">Source<svg class="ic ic-s" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
-          <a href="https://github.com/Pandaismyname1/SEMI/releases">Releases<svg class="ic ic-s" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
-        </div>
-      </div>
-    </article>
-
-    <article class="cell cell-d cell-tint">
+      <img src="assets/img/agi-docs.webp" width="1440" height="900" alt="The AGI orchestrator documentation site" loading="lazy">
       <div class="cell-body">
         <h3><a href="https://github.com/Pandaismyname1/agi-orchestrator">AGI orchestrator</a></h3>
-        <p>Keeps interactive Claude Code sessions running unattended. A local LLM reads each finished turn and decides the next step, so nothing sits idle waiting for "ok, continue". No API key, nothing leaves the machine.</p>
+        <p>Keeps interactive Claude Code sessions running unattended. A local LLM reads each finished turn and decides the next step, so nothing sits idle waiting for "ok, continue". Drives the real CLI in a pseudo-terminal, so usage stays on the subscription: no API key, nothing leaves the machine.</p>
         <div class="links">
           <a href="https://github.com/Pandaismyname1/agi-orchestrator">Source<svg class="ic ic-s" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
           <a href="https://pandaismyname1.github.io/agi-orchestrator/">Docs<svg class="ic ic-s" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
@@ -179,7 +236,7 @@
       </div>
     </article>
 
-    <article class="cell cell-e cell-code">
+    <article class="cell cell-b cell-code">
       <pre aria-hidden="true"><code>:::callout{severity=blocking}
 Migration 0042 is not on prod.
 :::
@@ -190,14 +247,50 @@ Migration 0042 is not on prod.
 ::::</code></pre>
       <div class="cell-body">
         <h3><a href="https://github.com/Pandaismyname1/markus-md2">MD2</a></h3>
-        <p>A thin directive layer over Markdown for documents an AI writes and a human reads. Callouts, steps, tabs, timelines and charts at roughly the token cost of plain Markdown.</p>
+        <p>A thin directive layer over Markdown for documents an AI writes and a human reads. Callouts, steps, tabs, timelines and charts at roughly the token cost of plain Markdown. Runs in Node and in the browser.</p>
         <div class="links">
           <a href="https://github.com/Pandaismyname1/markus-md2">Source<svg class="ic ic-s" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
         </div>
       </div>
     </article>
 
-    <article class="cell cell-f cell-tint-2">
+    <article class="cell cell-c cell-img">
+      <img src="assets/img/letsdo-emi-compat.webp" width="700" height="957" alt="EMI recipe viewer showing a Let's Do Bakery recipe" loading="lazy">
+      <div class="cell-body">
+        <h3><a href="https://modrinth.com/mod/lets-do-emi-compat">[Let's Do Addon] EMI Compat</a></h3>
+        <p>Brings every recipe from the Let's Do mod collection into EMI. Fabric, Forge and NeoForge. Close to ten million downloads across CurseForge and Modrinth.</p>
+        <div class="links">
+          <a href="https://modrinth.com/mod/lets-do-emi-compat">Modrinth<svg class="ic ic-s" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+          <a href="https://www.curseforge.com/minecraft/mc-mods/lets-do-emi-compat">CurseForge<svg class="ic ic-s" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+          <a href="https://github.com/Pandaismyname1/Let-s-Do-EMI-Compat">Source<svg class="ic ic-s" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+        </div>
+      </div>
+    </article>
+
+    <article class="cell cell-d cell-img">
+      <img src="assets/img/semi-emi.webp" width="1600" height="900" alt="The EMI recipe viewer interface inside a Minecraft inventory" loading="lazy">
+      <div class="cell-body">
+        <h3><a href="https://github.com/Pandaismyname1/SEMI">SEMI, Seasonal EMI</a></h3>
+        <p>An unofficial continuation of EMI that follows the newest Minecraft versions. Drop-in replacement, existing plugins keep working.</p>
+        <div class="links">
+          <a href="https://github.com/Pandaismyname1/SEMI">Source<svg class="ic ic-s" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+        </div>
+      </div>
+    </article>
+
+    <article class="cell cell-e cell-img">
+      <img src="assets/img/zoompack-dimensions.webp" width="1600" height="900" alt="A Zoompack 4 landscape with towering trees and a distant fortress" loading="lazy">
+      <div class="cell-body">
+        <h3><a href="https://www.curseforge.com/minecraft/modpacks/zoompack-4">Zoompack 4</a></h3>
+        <p>Hardcore RPG modpack for Minecraft 1.20.1 with five classes, nineteen races, nine dimensions and a live player economy. Product owner, 2024 to 2025.</p>
+        <div class="links">
+          <a href="https://www.curseforge.com/minecraft/modpacks/zoompack-4">CurseForge<svg class="ic ic-s" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+          <a href="https://github.com/zoom-packers">zoom-packers<svg class="ic ic-s" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+        </div>
+      </div>
+    </article>
+
+    <article class="cell cell-f cell-tint">
       <div class="cell-body">
         <h3><a href="https://github.com/Pandaismyname1/Hytale-Coins">Hytale Coins</a></h3>
         <p>An economy mod for Hytale. Six coin tiers, a wallet UI, a pay command, and a Java API so other mods can plug into the same currency.</p>
@@ -316,8 +409,8 @@ Migration 0042 is not on prod.
       <img class="avatar" src="assets/img/avatar.webp" width="320" height="320" alt="Emanuel Păiuș" loading="lazy">
       <h2>About</h2>
       <p>I'm Emanuel, Emi to most people. I've been writing software for a living since 2018: banking back ends at UniCredit, two shipped Android games, a racing sim in Unity with force-feedback wheel support, then a few years leading a small product team through a Kubernetes migration and an early OpenAI integration.</p>
-      <p>Today I work on terminal software for corrugated paper factories at mindit.io, and I co-founded Technical Inside, a studio in Iași that builds AI products and SaaS for clients. I studied at Alexandru Ioan Cuza University of Iași.</p>
-      <p>The modding started as a way to fix things that bothered me in our own modpack. It got out of hand. Twenty published projects later, the EMI compat addon alone is close to ten million downloads. Lately most of my open source is about making AI agents useful for real work.</p>
+      <p>Today I work on terminal software for corrugated paper factories at mindit.io, and I co-founded Technical Inside, a studio in Iași that builds AI products and SaaS, our own and for clients. I studied at Alexandru Ioan Cuza University of Iași.</p>
+      <p>The modding started as a way to fix things that bothered me in our own modpack and got out of hand. Lately most of my open source is about making AI agents useful for real work, and most of my products are built with them.</p>
     </div>
 
     <div class="roles">

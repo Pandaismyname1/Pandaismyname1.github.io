@@ -155,17 +155,17 @@ h3 { font-size: 1.05rem; letter-spacing: -0.01em; }
 
 .hero-figure { margin: 0; }
 .hero-figure img {
-  width: 100%; aspect-ratio: 16 / 10; object-fit: cover;
+  width: 100%; aspect-ratio: 40 / 21; object-fit: cover;
   border-radius: var(--r); box-shadow: var(--shadow); border: 1px solid var(--line);
 }
 .hero-figure figcaption { margin-top: 12px; font-size: 0.85rem; color: var(--muted); }
 
 /* Numbers band */
 .numbers-band { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--surface); }
-.numbers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding-block: 32px; }
+.numbers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding-block: 22px; }
 .num { display: flex; flex-direction: column; gap: 4px; }
-.num .n { font-family: var(--mono); font-size: clamp(1.6rem, 2.4vw, 2.1rem); font-weight: 500; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
-.num .l { font-size: 0.875rem; color: var(--muted); max-width: 22ch; }
+.num .n { font-family: var(--mono); font-size: clamp(1.25rem, 1.8vw, 1.6rem); font-weight: 500; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.num .l { font-size: 0.85rem; color: var(--muted); max-width: 24ch; }
 
 /* Sections */
 .section { padding-block: clamp(64px, 9vh, 104px); }
@@ -173,6 +173,16 @@ h3 { font-size: 1.05rem; letter-spacing: -0.01em; }
 .section-head .sub, .footer .sub { margin-top: 12px; color: var(--muted); font-size: 1.05rem; }
 .section-head .sub a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line); }
 .section-head .sub a:hover { text-decoration-color: var(--accent); }
+
+/* Case studies */
+.cases { display: flex; flex-direction: column; }
+.case { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(20px, 4vw, 56px); padding: 34px 0; border-top: 1px solid var(--line); }
+.case:first-child { border-top: 0; padding-top: 0; }
+.case-head h3 { font-size: 1.3rem; letter-spacing: -0.02em; }
+.case-meta { margin-top: 10px; display: flex; flex-direction: column; gap: 3px; font-family: var(--mono); font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+.case-body { display: flex; flex-direction: column; gap: 12px; }
+.case-body p { color: var(--muted); font-size: 1rem; max-width: 62ch; }
+.case-body .links { margin-top: 2px; padding-top: 0; }
 
 /* Bento */
 .bento {
@@ -287,6 +297,7 @@ h3 { font-size: 1.05rem; letter-spacing: -0.01em; }
   .cell-a img { aspect-ratio: 16 / 9; }
   .mods { grid-template-columns: 1fr; }
   .about { grid-template-columns: 1fr; }
+  .case { grid-template-columns: 1fr; gap: 14px; padding: 28px 0; }
 }
 @media (max-width: 720px) {
   .nav-links { display: none; }
@@ -297,7 +308,9 @@ h3 { font-size: 1.05rem; letter-spacing: -0.01em; }
   .role { grid-template-columns: 96px 1fr; }
   .footer .btn { max-width: 100%; }
 }
+@media (max-width: 560px) {
+  .numbers { grid-template-columns: 1fr; gap: 14px; }
+}
 @media (max-width: 420px) {
-  .numbers { grid-template-columns: 1fr; gap: 18px; }
   .footer .btn { font-size: 0.92rem; padding-inline: 14px; }
 }
